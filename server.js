@@ -5,3 +5,9 @@ const methodOverride = require('method-override');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`app listening on ${port}`)
+})
