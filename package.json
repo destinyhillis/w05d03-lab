@@ -1,7 +1,6 @@
 {
   "name": "w05d03-lab",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,5 +22,7 @@
     "express": "^4.16.4",
     "method-override": "^3.0.0",
     "mongoose": "^5.5.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
