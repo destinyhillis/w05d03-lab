@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html>
-   <head>
-       <meta charset="utf-8">
-       <title></title>
-       <link rel="stylesheet" href="/css/app.css">
-   </head>
-   <body>
-       <h1>Students Index page</h1>
-       <ul>
-           <% for(let i = 0; i < students.length; i++){ %>
-               <li>
-                   The <a href="/students/<%=students[i]._id%>"><%=students[i].name; %></a>
-                   <% } else { %>
-                     Nobody
-                   <% } %>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Students</h1>
+    
+    <% for (let i = 0; i < students.length; i++) { %>
+    <%= students[i].name %><br>
+    <%= students[i].name %> is <%= students[i].age %> years old. <br>
+    <% if (students[i].here === true){ %>
+        They are here.<br>
+   <% } else { %>
+    They are not here.<b>
+    <% } %>
+    Their best trait is <%= students[i].bestTrait %><br>
+    
+    <a href="/students/<%=  %>/edit"><input type="submit" value="Edit Student"></a>
+    <input type="submit" value="Delete Student" action="" method="" >
+<% } %>
 
-                   <form action="/students/<%=students[i]._id%>?_method=DELETE" method="POST">
-                     <button type="submit">Delete</button>
-                   </form>
-               </li>
-           <% } %>
-       </ul>
-       <nav>
-           <a href="/students/new">Create a New Student</a>
-       </nav>
-   </body>
+</body>
 </html>

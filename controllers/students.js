@@ -14,6 +14,12 @@ router.get('/', (req, res) => {
     })
 })
 
+// create route
+router.put('/:id', (req, res) => {
+    console.log(req.params.id)
+    res.send('create route hit')
+})
+
 
 
 
